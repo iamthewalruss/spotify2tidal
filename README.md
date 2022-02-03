@@ -20,6 +20,6 @@ Setup:
 
 How to use:
 
-Simply run the `spotify2tidal.py`file like the following:
+Simply run the `spotify2tidal.py`file in a terminal like the following:
 
 `python2 spotify2tidal.py`
