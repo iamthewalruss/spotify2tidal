@@ -1,5 +1,5 @@
 # spotify2tidal
-Tool for migrating Spotify playlists to Tidal
+Hacky tool for migrating Spotify playlists to Tidal
 
 Requirements:
 * Python 2.x with the requests package installed
