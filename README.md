@@ -3,7 +3,7 @@ Hacky tool for migrating Spotify playlists to Tidal
 
 Requirements:
 * Python 2.x with the requests package installed
-* Spotfy and Tidal access tokens (instructions below)
+* Spotify and Tidal access tokens (instructions below)
 
 Setup:
 * Log in to https://open.spotify.com
