@@ -15,8 +15,8 @@ Setup:
 * Log in to https://listen.tidal.com/
 * Open Developer Tools again and paste the following into the console:
 
-`var x = localStorage.getItem("_TIDAL_activeSession2");console.log(JSON.parse(x)["oAuthAccessToken"])`
-* Save the returned value in a file called `tidal.token` in the same folder as the `spotify2tidal.py` file
+`JSON.parse(localStorage.getItem("_TIDAL_activeSession2"))["oAuthAccessToken"]`
+* Save the returned value (remove the single quotes) in a file called `tidal.token` in the same folder as the `spotify2tidal.py` file
 
 How to use:
 
