@@ -20,7 +20,7 @@ spotifyTokenFile = open("spotify.token")
 spotifyToken = spotifyTokenFile.readlines()[0].rstrip() ## hacky way of turning the token into a string
 
 
-## get tidal token:
+## get tidal token from web browser console:
 ## JSON.parse(localStorage.getItem("_TIDAL_activeSession2"))["oAuthAccessToken"]
 
 tidalTokenFile = open("tidal.token")
