@@ -283,8 +283,17 @@ def whoami():
 
 
 def main():
+
+	print """
+                       __    _____       ________   __  .__    .___      .__   
+  ____________   _____/  |__/ ____\__.__.\_____  \_/  |_|__| __| _/____  |  |  
+ /  ___/\____ \ /  _ \   __\   __<   |  | /  ____/\   __\  |/ __ |\__  \ |  |  
+ \___ \ |  |_> >  <_> )  |  |  |  \___  |/       \ |  | |  / /_/ | / __ \|  |__
+/____  >|   __/ \____/|__|  |__|  / ____|\_______ \|__| |__\____ |(____  /____/
+     \/ |__|                      \/             \/             \/     \/      
+     """
 	
-	print "[+] Current Spotify user is: " + me + "\n"
+	print "\n[+] Current Spotify user is: " + me + "\n"
 
 	print "[+] Starting Spotify part...\n"
 	spotifyStuff()
@@ -293,7 +302,6 @@ def main():
 	print "[+] Starting Tidal part..."
 	tidalStuff()
 	print "[+] Tidal part done!"
-
 
 ## establish user identity
 me = whoami()
