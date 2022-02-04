@@ -201,7 +201,7 @@ def addSongs(playlistId, playlistFile):
 		artist = f[counter].split(",")[0]
 		title = f[counter].split(",")[1]
 
-		get_song = makeHttpGetTidal("https://listen.tidal.com/v1/search/top-hits?query=" + artist + "%20" + title.replace("&", "%26") + "&types=ARTISTS,ALBUMS,TRACKS,VIDEOS,PLAYLISTS&countryCode=SE")
+		get_song = makeHttpGetTidal("https://listen.tidal.com/v1/search/top-hits?query=" + urllib2.quote(artist.encode('UTF-8')) + "%20" + urllib2.quote(title.encode('UTF-8')) + "&types=ARTISTS,ALBUMS,TRACKS,VIDEOS,PLAYLISTS&countryCode=SE")
 
 		try: 
 			if get_song["tracks"]["items"][0]["title"] == title and get_song["tracks"]["items"][0]["artists"][0]["name"] == artist:
