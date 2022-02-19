@@ -11,7 +11,7 @@ sys.setdefaultencoding('UTF8')
 import os
 import json
 import requests
-
+import urllib2
 
 ## get spotify token from web browser console:
 ## var x = document.getElementById("config").innerHTML;console.log(JSON.parse(x)["accessToken"])
@@ -64,7 +64,7 @@ def parsePlaylist(data):
 
 	playlist = ""
 
-	while counter < total:
+    while (counter < total) and (counter < len(data['items'])):
 		## parse artist
 		artist = data['items'][counter]['track']['artists'][0]['name']
 
@@ -104,7 +104,10 @@ def parsePlaylistList(data):
 		uri = uri.replace("spotify:playlist:","") ## only keep the playlist identifier
 
 		## parse title
-		title = data['contents']['metaItems'][counter]['attributes']['name']
+        if bool(data['contents']['metaItems'][counter]['attributes']):
+            title = data['contents']['metaItems'][counter]['attributes']['name']
+        else:
+            pass
 
 		## check so that we are the owner of the playlist
 		if me == data['contents']['metaItems'][counter]['ownerUsername']:
